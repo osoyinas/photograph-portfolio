@@ -8,9 +8,11 @@
     --medium-white: #d7dfde;
     --light-white: #f3f3f3;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 * {
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
@@ -117,12 +119,14 @@ nav {
     /* width: 100%; */
     z-index: 1;
 }
-.gradient{
+
+.gradient {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right,rgba(0,0,0,1) 60%,rgba(0,0,0,0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
     z-index: 2;
 }
+
 .presentation-content {
     z-index: 2;
     color: var(--light-white);
@@ -185,7 +189,7 @@ nav {
 /* ABOUT ME */
 
 #aboutme {
-    background: linear-gradient(var(--light-white),var(--medium-white));
+    background: linear-gradient(var(--light-white), var(--medium-white));
     padding-top: 7vh;
     width: 100%;
     height: 100%;
@@ -256,58 +260,42 @@ nav {
 
 /* MEDIA QUERIES */
 @media(max-width:764px) {
+
     .presentation {
-        border: none;
-        display: grid;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+        height: 50vh;
+    }
+
+    .presentation-content {
+        position: absolute;
+        margin: 0;
+        /* width: 100%; */
+        display: flex;
+        margin-inline: auto;
+    }
+
+
+    .name {
+        font-size: 10vh;
+    }
+
+    #static-txt {
+        font-size: 3vh;
+
+    }
+
+    .gradient {
+        background: linear-gradient(rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.7));
+
     }
     #presentation__bg-img {
-        height: 100%;
-        width: 100%;
-        right: 0;
-        top: 0;
-        background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,1)), url(images/img_aboutme.jpg) top center no-repeat;
-        background-size: 500px;
         background-color: black;
         position: absolute;
         transform: scaleX(-1);
-        z-index: -1;
-    }
-    .presentation-content {
-        position: block;
-        width: 240px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .welcome {
-        text-align: center;
-        color: var(--light-blue);
-        text-align: center;
-        font-family: 'Roboto Mono', monospace;
-        font-weight: 300;
-        font-size: 1.5vh;
-        padding-bottom: 2vh;
-        padding-left: 0;
-    }
-    
-    .name {
-        font-size: 10vh;
-        text-align: center;
-    }
-    
-    #static-txt {
-        display: -webkit-box; 
-        /* color: var(--medium-blue); */
-        text-align: center;
-        /* line-height: 0px; */
-        font-family: 'Roboto Mono', monospace;
-        padding-left: 0;
-        font-size: 3vh;
-        font-weight: 200;
+        height: 100%;
+        right: 0;
+        /* width: 100%; */
+        z-index: 1;
     }
 
     #nav {
