@@ -2,13 +2,15 @@
 
 
 :root {
-    --dark-blue: #152340;
-    --lighter-blue: #1B3059;
-    --light-yellow: #F2DC6D;
-    --yellow: #F2E205;
-    --dark-white: #D9D9D9;
+    --dark-blue: #15416d;
+    --medium-blue: #1a6585;
+    --light-blue: #82a0b3;
+    --medium-white: #d7dfde;
+    --light-white: #f3f3f3;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
@@ -17,6 +19,7 @@
 }
 
 body {
+
     /* background: #1B3059; */
 }
 
@@ -25,10 +28,7 @@ li {
     list-style: none;
 }
 
-html {
-    scroll-behavior: smooth;
-    height: 2000px;
-}
+
 
 a {
     color: inherit;
@@ -39,21 +39,22 @@ a {
     display: none;
 }
 
-button{
+button {
     text-decoration: none;
     background: none;
     outline: none;
     border: none;
 }
+
 /* START */
 
 #start .content header {
+    z-index: 3;
     position: fixed;
     /* background: var(--dark-blue); */
     width: 100%;
     height: 7vh;
     align-items: center;
-    background-color: var(--dark-blue);
 }
 
 nav {
@@ -74,46 +75,91 @@ nav {
 }
 
 /* PRESENTATION */
+#start {
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+}
+
 .presentation {
-    background: linear-gradient(var(--dark-blue), #1B3059);
-    
-    width: auto;
-    height: 100vh;
+    background-color: black;
+    width: 100%;
+    height: 40vh;
+    border-left: solid 2px black;
+    border-top: solid 1px black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-
-.presentation-content {
-    color: var(--dark-white);
+/* #presentation__bg-img {
+    height: 100%;
     width: 100%;
-    text-align: center;
+    right: 0;
+    top: 0;
+    background:linear-gradient(to left,rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,0)), url(images/img_presentation.jpg)  no-repeat;
+    background-color: black;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: -1;
+} */
+
+#presentation__bg-img {
+    background-color: black;
+    position: absolute;
+    transform: scaleX(-1);
+    height: 100%;
+    right: 0;
+    /* width: 100%; */
+    z-index: 1;
+}
+.gradient{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,rgba(0,0,0,1) 60%,rgba(0,0,0,0));
+    z-index: 2;
+}
+.presentation-content {
+    z-index: 2;
+    color: var(--light-white);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    position: absolute;
+    left: 15%;
+    /* margin-left: 20%; */
 }
 
 .welcome {
-    text-align: center;
+    color: var(--light-blue);
+    text-align: left;
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     font-size: 2vh;
-    color: var(--yellow);
     padding-bottom: 2vh;
     padding-left: 1vh;
 }
 
 .name {
-    text-align: center;
+    text-align: left;
     font-size: 15vh;
 }
 
 #static-txt {
+
+    /* color: var(--medium-blue); */
+    text-align: left;
     font-family: 'Roboto Mono', monospace;
-    padding-left: 1vh;
-    font-size: 5vh;
+    /* padding-left: 1vh; */
+    font-size: 5em;
     font-weight: 200;
 }
-.auto-type{
+
+.auto-type {
     font-family: 'Roboto Mono', monospace;
 
 }
@@ -126,20 +172,20 @@ nav {
     /* width: 30px; */
 }
 
-#btnSaberMas{
+#btnSaberMas {
     cursor: pointer;
     font-family: 'Roboto Mono', monospace;
     font-size: 3vh;
     color: var(--light-yellow);
     text-decoration: underline;
-    margin-top:7vh;
+    margin-top: 7vh;
 
 }
+
 /* ABOUT ME */
 
 #aboutme {
-    background: linear-gradient(#1B3059,var(--dark-blue) );
-
+    background: linear-gradient(var(--light-white),var(--medium-white));
     padding-top: 7vh;
     width: 100%;
     height: 100%;
@@ -157,7 +203,7 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    gap:20px;
+    gap: 20px;
     padding: 20px;
 
 }
@@ -167,7 +213,7 @@ nav {
     height: auto;
     width: 40vh;
     max-width: 100%;
-    /* border: 3px solid var(--light-yellow); */
+
     border-radius: 15px;
 }
 
@@ -182,42 +228,86 @@ nav {
     gap: 20px;
 }
 
-.text h1{
+.text h1 {
     font-size: 60px;
     color: var(--light-yellow);
     padding-bottom: 20px;
 }
-.text p{
-    
+
+.text p {
+
     text-align: justify;
     line-height: 30px;
     letter-spacing: 1px;
 }
-.text p a{
-    text-decoration:underline;
+
+.text p a {
+    text-decoration: underline;
     font-style: italic;
 }
 
 /* PHOTOS */
 
-#photos{
+#photos {
     background: linear-gradient(var(--dark-blue), #1B3059);
     width: 100%;
     height: 100vh;
 }
+
 /* MEDIA QUERIES */
 @media(max-width:764px) {
     .presentation {
-        display: flex;
+        border: none;
+        display: grid;
         justify-content: center;
+        align-items: center;
     }
-
+    #presentation__bg-img {
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: 0;
+        background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,1)), url(images/img_aboutme.jpg) top center no-repeat;
+        background-size: 500px;
+        background-color: black;
+        position: absolute;
+        transform: scaleX(-1);
+        z-index: -1;
+    }
     .presentation-content {
-        padding: 0;
+        position: block;
+        width: 240px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .welcome {
+        text-align: center;
+        color: var(--light-blue);
+        text-align: center;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 300;
+        font-size: 1.5vh;
+        padding-bottom: 2vh;
+        padding-left: 0;
+    }
+    
+    .name {
+        font-size: 10vh;
+        text-align: center;
+    }
+    
+    #static-txt {
+        display: -webkit-box; 
+        /* color: var(--medium-blue); */
+        text-align: center;
+        /* line-height: 0px; */
+        font-family: 'Roboto Mono', monospace;
+        padding-left: 0;
+        font-size: 3vh;
+        font-weight: 200;
     }
 
     #nav {
@@ -225,7 +315,7 @@ nav {
     }
 
     .responsive {
-        display: block;
+        /* display: block; */
     }
 
     .header {
@@ -240,14 +330,5 @@ nav {
         right: 0;
         margin: 1.5vh;
         color: var(--dark-white);
-    }
-
-    .welcome {
-        /* margin-bottom: 0.5vh; */
-        padding-left: 0;
-    }
-
-    #static-txt {
-        padding-left: 0;
     }
 }
