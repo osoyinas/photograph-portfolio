@@ -184,18 +184,19 @@ button {
   color: var(--orange);
   font-size: max(3em, 5vh);
   text-align: center;
+  margin: 5vh 0;
 }
 
 #photos .image-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 2vw;
 }
 
 #photos .image-container .image {
   /* height: 50vw; */
-  width: 30%;
+  width: 20%;
   min-width: 300px;
   position: relative;
   overflow: hidden;
@@ -237,7 +238,7 @@ button {
 #photos .popup-image .close {
   position: absolute;
   top: 1vh;
-  right: 1vh;
+  right: 1.5vh;
   z-index: 111;
   color: var(--white);
   font-size: 3vh;
