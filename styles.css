@@ -35,6 +35,11 @@ button {
   border: none;
 }
 
+#landscape {
+  display: none;
+  z-index: -100;
+}
+
 /* /GLOBAL */
 
 /* PRESENTATION */
@@ -110,14 +115,14 @@ button {
   /* align-items: center; */
   justify-content: center;
   flex-wrap: wrap;
-  gap:10vh;
+  gap: 10vh;
   /* flex-wrap: wrap; */
 }
 
 #aboutme .container .text {
   color: var(--white);
   height: 100%;
-  width: min(80%,50vh);
+  width: min(80%, 50vh);
   text-align: justify;
 }
 
@@ -127,6 +132,7 @@ button {
   font-size: 3em;
   line-height: 60px;
 }
+
 #aboutme .container .text .paragraph {
   line-height: 1.2em;
   font-size: 1.2em;
@@ -134,7 +140,7 @@ button {
 
 
 #aboutme .container img {
-  width: min(70%,40vh);
+  width: min(70%, 40vh);
   border: dotted 2px var(--orange);
   border-radius: 15px;
 }
@@ -144,3 +150,21 @@ button {
 /* /PHOTOS */
 
 /* MEDIA QUERIES */
+@media(max-width: 768px) and (orientation: landscape) {
+  #landscape {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    color: var(--orange);
+    background: var(--dark-gray);
+    z-index: 990000;
+    width: 100%;
+    height: 100vh;
+    font-size: 120%;
+    align-items: center;
+    justify-content: center;
+  }
+}
