@@ -1,6 +1,7 @@
 /* GLOBAL */
 :root {
     --dark-gray:#222831;
+    --semi-gray: #20252d;
     --gray:#393e46;
     --orange:#f96d00;
     --white:#f2f2f2;
@@ -89,16 +90,27 @@ font-weight: 300;
 /*ABOUT ME*/
 #aboutme{
     height: 100vh;
-    background-color: var(--gray);
+    background-color: var(--semi-gray);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 #aboutme .container{
-    width: 90%;
-    height: auto;
-    background-color:var(--dark-gray);
+    color: var(--white);
+    max-width: max(30vw,200px);
+
+    margin: 0 10%;
+}
+#aboutme img{
+    width: auto;
+    height: 40%;
+}
+#aboutme .container .tittle{
+    color: orange;
+}
+#aboutme .container .text{
+    padding-top: 10px;
 }
 /*/ABOUT ME*/
 /* PHOTOS */
