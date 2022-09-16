@@ -10,7 +10,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+body{
+  background-color: var(--dark-gray);
+}
 * {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
@@ -62,7 +64,8 @@ button {
   color: var(--white);
   text-align: center;
   line-height: 3em;
-  font-size: min(5vw, 25px);
+  font-size: max(22px, 2vw);
+
 }
 
 #presentation .content .welcome {
@@ -90,11 +93,11 @@ button {
 }
 
 #presentation .containerSabermas {
-  font-size: 1.3em;
+  font-size: max(1.3em,1.8vw);
   color: var(--orange);
   background-color: var(--gray);
-  padding: 12px;
-  margin-top: 4vh;
+  padding: 1vw;
+  margin-top: 12vh;
   border-radius: 10px;
 }
 
@@ -130,7 +133,7 @@ button {
   color: var(--white);
   height: 100%;
   width: min(80%, 50vh);
-  text-align: justify;
+  text-align: left;
   font-weight: 300;
 }
 
@@ -139,7 +142,7 @@ button {
   /* line-height: 100px;   */
   color: var(--orange);
   font-size: max(3em, 5vh);
-  line-height: 60px;
+  line-height: 6vh;
 }
 
 #aboutme .container .text .paragraph {
@@ -148,17 +151,22 @@ button {
 }
 #aboutme .container .text .paragraph a{
   font-style: italic;
-  text-decoration: underline;
+  cursor: pointer;
 }
 
 #aboutme .container img {
   min-height: 400px;
-  height: 40vw;
+  height: 30vw;
   /* border: dashed 0.2vw var(--orange); */
   border-radius: 15px;
 }
 
 /*/ABOUT ME*/
+#photos{
+  height: 100vh;
+  background-color: var(--dark-gray);
+}
+
 /* PHOTOS */
 /* /PHOTOS */
 
