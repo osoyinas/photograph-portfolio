@@ -39,6 +39,9 @@ button {
   display: none;
   z-index: -100;
 }
+.rotationLandscape{
+  orientation: 90deg;
+}
 
 /* /GLOBAL */
 
@@ -173,8 +176,7 @@ button {
   }
 }
 @media(max-width:1024px){
-  /* #aboutme .container img {
-    height: 400px;
-    min-height: 0px;
-  } */
+  #aboutme .container .text {
+    text-align: justify;
+  }
 }
