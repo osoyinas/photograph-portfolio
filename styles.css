@@ -112,10 +112,12 @@ button {
   height: auto;
   padding: 5vh 0;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10vh;
+  gap: 15vw;
+  margin: 0 3vw;
+  position: relative;
   /* flex-wrap: wrap; */
 }
 
@@ -126,22 +128,24 @@ button {
   text-align: justify;
 }
 
+
 #aboutme .container .text .tittle {
   /* line-height: 100px;   */
   color: var(--orange);
-  font-size: 3em;
+  font-size: max(3em, 5vh);
   line-height: 60px;
 }
 
 #aboutme .container .text .paragraph {
   line-height: 1.2em;
-  font-size: 1.2em;
+  font-size: max(1.2em, 2.3vh);
 }
 
 
 #aboutme .container img {
-  width: min(70%, 40vh);
-  border: dotted 2px var(--orange);
+  min-height: 400px;
+  height: 40vw;
+  /* border: dashed 0.2vw var(--orange); */
   border-radius: 15px;
 }
 
@@ -150,7 +154,7 @@ button {
 /* /PHOTOS */
 
 /* MEDIA QUERIES */
-@media(max-width: 768px) and (orientation: landscape) {
+@media(max-width: 1024px) and (max-height:425px) {
   #landscape {
     display: flex;
     position: fixed;
@@ -167,4 +171,10 @@ button {
     align-items: center;
     justify-content: center;
   }
+}
+@media(max-width:1024px){
+  /* #aboutme .container img {
+    height: 400px;
+    min-height: 0px;
+  } */
 }
