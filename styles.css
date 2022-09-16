@@ -1,121 +1,146 @@
 /* GLOBAL */
 :root {
-    --dark-gray:#222831;
-    --semi-gray: #20252d;
-    --gray:#393e46;
-    --orange:#f96d00;
-    --white:#f2f2f2;
+  --dark-gray: #222831;
+  --semi-gray: #20252d;
+  --gray: #393e46;
+  --orange: #f96d00;
+  --white: #f2f2f2;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 li {
-    text-decoration: none;
-    list-style: none;
+  text-decoration: none;
+  list-style: none;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 button {
-    text-decoration: none;
-    background: none;
-    outline: none;
-    border: none;
+  text-decoration: none;
+  background: none;
+  outline: none;
+  border: none;
 }
+
 /* /GLOBAL */
 
-
 /* PRESENTATION */
-#presentation{
-    height: 100vh;
-    /* background: linear-gradient(var(--gray),var(--dark-gray)); */
-    background-color: var(--dark-gray);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+#presentation {
+  height: 100vh;
+  /* background: linear-gradient(var(--gray),var(--dark-gray)); */
+  background-color: var(--dark-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-#presentation .content{
-    color: var(--white);
-    text-align: center;
-    line-height: 3em;
-    font-size:min(5vw,25px);
-    
+
+#presentation .content {
+  color: var(--white);
+  text-align: center;
+  line-height: 3em;
+  font-size: min(5vw, 25px);
 }
-#presentation .content .welcome{
-    font-weight: 300;
-    font-size:1.6em;
+
+#presentation .content .welcome {
+  font-weight: 300;
+  font-size: 1.6em;
 }
-#presentation .content .name{
-    margin: 15px 0;
-    font-family: 'Kanit', sans-serif;
-    font-size: 6em;
+
+#presentation .content .name {
+  margin: 15px 0;
+  font-family: "Kanit", sans-serif;
+  font-size: 6em;
 }
-#presentation .content .static-text{
-    font-size: 1.6em;
-    font-weight: 300;
-    margin-top:10px; 
-    margin-bottom:-10px; 
+
+#presentation .content .static-text {
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
-#presentation .content .auto-type,.typed-cursor{
-font-size: 3em;
-font-weight: 300;
+
+#presentation .content .auto-type,
+.typed-cursor {
+  font-size: 3em;
+  font-weight: 300;
 }
-#presentation .containerSabermas{
-    font-size: 1.3em;
-    color: orange;
-    background-color: var(--gray);
-    padding: 12px;
-    margin-top: 4vh;
-    border-radius: 10px;
+
+#presentation .containerSabermas {
+  font-size: 1.3em;
+  color: var(--orange);
+  background-color: var(--gray);
+  padding: 12px;
+  margin-top: 4vh;
+  border-radius: 10px;
 }
-.sabermasBtn:hover{
-    width: 110%;
+
+.sabermasBtn:hover {
+  width: 110%;
 }
 
 /* /PRESENTATION */
 /*ABOUT ME*/
-#aboutme{
-    height: 100vh;
-    background-color: var(--semi-gray);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+#aboutme {
+  min-height: 100vh;
+  background-color: var(--semi-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#aboutme .container{
-    color: var(--white);
-    max-width: max(30vw,200px);
 
-    margin: 0 10%;
+#aboutme .container {
+  /* max-width: 50vw; */
+  height: auto;
+  padding: 5vh 0;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:10vh;
+  /* flex-wrap: wrap; */
 }
-#aboutme img{
-    width: auto;
-    height: 40%;
+
+#aboutme .container .text {
+  color: var(--white);
+  height: 100%;
+  width: min(80%,50vh);
+  text-align: justify;
 }
-#aboutme .container .tittle{
-    color: orange;
+
+#aboutme .container .text .tittle {
+  /* line-height: 100px;   */
+  color: var(--orange);
+  font-size: 3em;
+  line-height: 60px;
 }
-#aboutme .container .text{
-    padding-top: 10px;
+#aboutme .container .text .paragraph {
+  line-height: 1.2em;
+  font-size: 1.2em;
 }
+
+
+#aboutme .container img {
+  width: min(70%,40vh);
+  border: dotted 2px var(--orange);
+  border-radius: 15px;
+}
+
 /*/ABOUT ME*/
 /* PHOTOS */
 /* /PHOTOS */
-
-
 
 /* MEDIA QUERIES */
