@@ -40,16 +40,18 @@ button {
 /* PRESENTATION */
 #presentation{
     height: 100vh;
+    /* background: linear-gradient(var(--gray),var(--dark-gray)); */
     background-color: var(--dark-gray);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 #presentation .content{
     color: var(--white);
     text-align: center;
     line-height: 3em;
-    font-size:min(5vw,30px);
+    font-size:min(5vw,25px);
     
 }
 #presentation .content .welcome{
@@ -70,13 +72,34 @@ button {
 #presentation .content .auto-type,.typed-cursor{
 font-size: 3em;
 font-weight: 300;
-
-/* font-weight: 200; */
+}
+#presentation .containerSabermas{
+    font-size: 1.3em;
+    color: orange;
+    background-color: var(--gray);
+    padding: 12px;
+    margin-top: 4vh;
+    border-radius: 10px;
+}
+.sabermasBtn:hover{
+    width: 110%;
 }
 
 /* /PRESENTATION */
 /*ABOUT ME*/
-
+#aboutme{
+    height: 100vh;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#aboutme .container{
+    width: 90%;
+    height: auto;
+    background-color:var(--dark-gray);
+}
 /*/ABOUT ME*/
 /* PHOTOS */
 /* /PHOTOS */
