@@ -34,6 +34,7 @@ icon.addEventListener("click", () => {
     menu.classList.toggle("displayMenu");
     if (blocked == true) {
         enableScroll();
+        blocked=false;
     }
     else {
         disableScroll();
