@@ -341,13 +341,6 @@ nav .list li:hover .link {
 
 
 
-
-
-
-
-
-
-
 /* MEDIA QUERIES */
 @media(max-width: 1024px) and (max-height:425px) {
   #landscape {
@@ -372,4 +365,18 @@ nav .list li:hover .link {
   #aboutme .container .text {
     text-align: justify;
   }
+
+  .from-left {
+    transform: translateX(-20%);
+  }
+  
+  .from-right {
+    transform: translateX(20%);
+  }
+  .from-left,
+  .from-right{
+  transition: all 600ms ease-in-out;
+  opacity: 0;
+  }
+
 }
