@@ -8,11 +8,14 @@
 }
 
 html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   scroll-behavior: smooth;
   overflow-x: hidden;
 
 }
-
+.menu .menu-container a{
+display: none;
+}
 body {
   max-width: 100vw;
   background-color: var(--dark-gray);
@@ -307,6 +310,7 @@ nav .list li:hover .link {
 }
 
 .selectDisable {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -387,9 +391,44 @@ nav .list li:hover .link {
   #aboutme .container .text {
     text-align: justify;
   }
-
+  .menu .menu-container a{
+    display: block;
+    }
+  .menu{
+    width: 100vw;
+    height: 200vh;
+    position: fixed;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    transform: translate(100%);
+    transition: 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .displayMenu{
+    transform: translate(0);
+  }
+  .menu .menu-container{
+    background-color: rgb(165, 65, 65);
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .option{
+    z-index: 1200;
+    color: white;
+  }
   /* ANIMATION BUTON */
   .menu_icon {
+    z-index: 999;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     width: 100%;
     height: 4vh;
     margin: auto;
@@ -438,9 +477,10 @@ nav .list li:hover .link {
   }
 
   /* //ANIMATION BUTTON */
-  nav{
+  nav {
     justify-content: right;
   }
+
   nav .list {
     display: none;
   }
