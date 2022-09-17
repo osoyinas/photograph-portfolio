@@ -13,6 +13,7 @@ html {
 
 body {
   background-color: var(--dark-gray);
+  overflow-x: hidden;
 }
 
 * {
@@ -56,10 +57,56 @@ button {
   display: none;
 }
 
+/* ANIMATIONS & TRANSITIONS */
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-7px);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-60%);
+}
+
+.from-right {
+  transform: translateX(60%);
+}
+.from-left,
+.from-right{
+transition: all 600ms ease-in-out;
+opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear{
+transform: translateX(0);
+opacity: 1;
+}
+
 /* /GLOBAL */
 /* NAV */
 
-nav{
+nav {
   z-index: 9999;
   background-color: var(--dark-gray);
   width: 100%;
@@ -68,33 +115,40 @@ nav{
   justify-content: center;
   align-items: center;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   transition: all 0.4s ease;
 }
-nav .list{
+
+nav .list {
   display: flex;
   justify-content: space-between;
   gap: 3vw;
 }
-nav .list li{
-  margin:1.5vh 0;
+
+nav .list li {
+  margin: 1.5vh 0;
 }
-nav .list li .link{
+
+nav .list li .link {
   margin: 50vh 0;
   font-size: 1.3em;
   color: var(--white);
-  font-weight: 300;
+  font-weight: 400;
 }
-nav .list li:hover .link{
-height: 1%;
+
+nav .list li:hover .link {
+  height: 1%;
 }
-.scroll-up{
-  filter: drop-shadow(0,-10px,60px red);
+
+.scroll-up {
+  box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.2);
 }
-.scroll-down{
-  transform: translate3d(0,-100%,0);
-} 
+
+.scroll-down {
+  transform: translate3d(0, -100%, 0);
+}
+
 /* /NAV */
 /* PRESENTATION */
 #presentation {
@@ -140,16 +194,13 @@ height: 1%;
 }
 
 #presentation .containerSabermas {
-  font-size: max(1.3em, 1.8vw);
+  font-size: max(1.3em, 1.2vw);
   color: var(--orange);
   background-color: var(--gray);
   padding: 15px;
   margin-top: 12vh;
-  border-radius: 10px;
-}
-
-.sabermasBtn:hover {
-  width: 110%;
+  border-radius: 2px;
+  animation: float 2s infinite;
 }
 
 /* /PRESENTATION */
@@ -208,6 +259,7 @@ height: 1%;
   /* border: dashed 0.2vw var(--orange); */
   border-radius: 15px;
 }
+
 /*/ABOUT ME*/
 
 /* PHOTOS */
