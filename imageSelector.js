@@ -6,4 +6,7 @@ document.querySelectorAll(".image-container .image img").forEach(image => {
 });
 document.querySelector(".close").addEventListener('click',() => {
     document.querySelector(".popup-image").style.display = 'none';
+});
+document.querySelector(".popup-image img").addEventListener('click',() => {
+    document.querySelector(".popup-image").style.display = 'none';
 })

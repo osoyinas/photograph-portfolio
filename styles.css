@@ -57,7 +57,45 @@ button {
 }
 
 /* /GLOBAL */
+/* NAV */
 
+nav{
+  z-index: 9999;
+  background-color: var(--dark-gray);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top:0;
+  left:0;
+  transition: all 0.4s ease;
+}
+nav .list{
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
+}
+nav .list li{
+  margin:1.5vh 0;
+}
+nav .list li .link{
+  margin: 50vh 0;
+  font-size: 1.3em;
+  color: var(--white);
+  font-weight: 300;
+}
+nav .list li:hover .link{
+height: 1%;
+}
+.scroll-up{
+  filter: drop-shadow(0,-10px,60px red);
+}
+.scroll-down{
+  transform: translate3d(0,-100%,0);
+} 
+/* /NAV */
 /* PRESENTATION */
 #presentation {
   height: 100vh;
@@ -105,7 +143,7 @@ button {
   font-size: max(1.3em, 1.8vw);
   color: var(--orange);
   background-color: var(--gray);
-  padding: 1vw;
+  padding: 15px;
   margin-top: 12vh;
   border-radius: 10px;
 }
@@ -156,7 +194,7 @@ button {
 
 #aboutme .container .text .paragraph {
   line-height: 1.2em;
-  font-size: max(1.2em, 2.3vh);
+  font-size: max(1.25em, 2.3vh);
 }
 
 #aboutme .container .text .paragraph a {
@@ -170,11 +208,10 @@ button {
   /* border: dashed 0.2vw var(--orange); */
   border-radius: 15px;
 }
-
 /*/ABOUT ME*/
+
 /* PHOTOS */
 #photos {
-  padding: 5vh 0;
   height: 100vh;
   position: relative;
   background-color: var(--dark-gray);
