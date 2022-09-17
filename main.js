@@ -28,9 +28,18 @@ btnSaberM.addEventListener('mouseout',()=>{
 
 let icon = document.querySelector(".menu_icon");
 let menu = document.querySelector(".menu");
-
+let options=document.querySelectorAll(".option");
 icon.addEventListener("click", () => {
   icon.classList.toggle("clicked");
   menu.classList.toggle("displayMenu");
-
 });
+
+options.forEach((option)=>{
+    option.addEventListener('click',()=>
+    {
+        icon.classList.toggle("clicked");
+        menu.classList.toggle("displayMenu");
+    })
+})
+
+// FUNCTIONS

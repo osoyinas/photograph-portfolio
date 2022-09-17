@@ -310,7 +310,6 @@ nav .list li:hover .link {
 }
 
 .selectDisable {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -398,7 +397,7 @@ nav .list li:hover .link {
     width: 100vw;
     height: 200vh;
     position: fixed;
-    /* background-color: rgba(0, 0, 0, 0.9); */
+    background-color: rgba(0, 0, 0, 0.9);
     transform: translate(100%);
     transition: 0.4s ease;
     display: flex;
@@ -409,17 +408,23 @@ nav .list li:hover .link {
     transform: translate(0);
   }
   .menu .menu-container{
-    background-color: rgb(165, 65, 65);
-    width: 80%;
-    height: 100vh;
+    width: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  .menu .menu-container .listResponsive{
+    padding-top: 80vh;
+    gap:20vh;
+  }
+
   .option{
-    z-index: 1200;
+    text-align: center;
+    font-size: 3em;
     color: white;
+    padding: 3vh 0;
   }
   /* ANIMATION BUTON */
   .menu_icon {
