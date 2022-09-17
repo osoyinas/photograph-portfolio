@@ -390,6 +390,9 @@ nav .list li:hover .link {
   #aboutme .container .text {
     text-align: justify;
   }
+  #aboutme .container .text .paragraph{
+  font-size: 1.2em;
+  }
   .menu .menu-container a{
     display: block;
     }
