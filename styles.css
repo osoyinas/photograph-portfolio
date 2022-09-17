@@ -9,11 +9,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 
 body {
+  max-width: 100vw;
   background-color: var(--dark-gray);
-  overflow-x: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -53,9 +55,6 @@ button {
   orientation: 90deg;
 }
 
-.responsiveBtn {
-  display: none;
-}
 
 .popup-image {
   display: none;
@@ -107,7 +106,9 @@ button {
   transform: translateX(0);
   opacity: 1;
 }
-
+.nav_responsive{
+  display: none;
+}
 /* /GLOBAL */
 /* NAV */
 
@@ -370,17 +371,25 @@ nav .list li:hover .link {
   #aboutme .container .text {
     text-align: justify;
   }
-
+  .nav_responsive{
+    z-index: 9999;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    height: auto;
+    color: var(--white);
+  }
   nav {
     display: none;
   }
 
   .from-left {
-    transform: translateX(-20%);
+    transform: translateX(-15%);
   }
 
   .from-right {
-    transform: translateX(20%);
+    transform: translateX(15%);
   }
 
   .from-left,

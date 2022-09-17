@@ -6,6 +6,7 @@ window.addEventListener("scroll",()=>{
         nav.classList.remove("scroll-up");
     }
     if(currentScroll>lastScroll && !nav.classList.contains("scroll-down")){
+        nav.removeAttribute("data-aos");
         nav.classList.add("scroll-down");
         nav.classList.remove("scroll-up");   
     }
