@@ -148,7 +148,9 @@ nav .list li:hover .link {
 .scroll-down {
   transform: translate3d(0, -100%, 0);
 }
-
+.hide{
+  display: none;
+}
 /* /NAV */
 /* PRESENTATION */
 #presentation {
@@ -337,10 +339,6 @@ nav .list li:hover .link {
 /* /PHOTOS */
 
 
-
-
-
-
 /* MEDIA QUERIES */
 @media(max-width: 1024px) and (max-height:425px) {
   #landscape {
@@ -365,7 +363,9 @@ nav .list li:hover .link {
   #aboutme .container .text {
     text-align: justify;
   }
-
+  nav{
+    display: none;
+  }
   .from-left {
     transform: translateX(-20%);
   }

@@ -1,4 +1,4 @@
-const nav=document.querySelector("nav");
+
 let lastScroll=0;
 window.addEventListener("scroll",()=>{
     currentScroll=window.scrollY;
@@ -7,8 +7,7 @@ window.addEventListener("scroll",()=>{
     }
     if(currentScroll>lastScroll && !nav.classList.contains("scroll-down")){
         nav.classList.add("scroll-down");
-        nav.classList.remove("scroll-up");
-        
+        nav.classList.remove("scroll-up");   
     }
     if(currentScroll<lastScroll && nav.classList.contains("scroll-down")){
         nav.classList.remove("scroll-down");
