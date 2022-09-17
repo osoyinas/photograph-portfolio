@@ -1,43 +1,49 @@
 
-let lastScroll=0;
-window.addEventListener("scroll",()=>{
-    currentScroll=window.scrollY;
-    if(currentScroll<=0){
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+    currentScroll = window.scrollY;
+    if (currentScroll <= 0) {
         nav.classList.remove("scroll-up");
     }
-    if(currentScroll>lastScroll && !nav.classList.contains("scroll-down")){
+    if (currentScroll > lastScroll && !nav.classList.contains("scroll-down")) {
         nav.removeAttribute("data-aos");
         nav.classList.add("scroll-down");
-        nav.classList.remove("scroll-up");   
+        nav.classList.remove("scroll-up");
     }
-    if(currentScroll<lastScroll && nav.classList.contains("scroll-down")){
+    if (currentScroll < lastScroll && nav.classList.contains("scroll-down")) {
         nav.classList.remove("scroll-down");
         nav.classList.add("scroll-up");
-    
+
     }
-    lastScroll=currentScroll;
+    lastScroll = currentScroll;
 });
-const container=document.querySelector(".containerSabermas")
-const btnSaberM=document.querySelector(".sabermasBtn")
-btnSaberM.addEventListener('mouseenter',()=>{
+const container = document.querySelector(".containerSabermas")
+const btnSaberM = document.querySelector(".sabermasBtn")
+btnSaberM.addEventListener('mouseenter', () => {
     container.classList.add("levitate");
 });
-btnSaberM.addEventListener('mouseout',()=>{
+btnSaberM.addEventListener('mouseout', () => {
     container.classList.remove("levitate");
 });
-
+let blocked = false;
 let icon = document.querySelector(".menu_icon");
 let menu = document.querySelector(".menu");
-let options=document.querySelectorAll(".option");
+let options = document.querySelectorAll(".option");
 icon.addEventListener("click", () => {
-  icon.classList.toggle("clicked");
-  menu.classList.toggle("displayMenu");
-  disableScroll();
+    icon.classList.toggle("clicked");
+    menu.classList.toggle("displayMenu");
+    if (blocked == true) {
+        enableScroll();
+    }
+    else {
+        disableScroll();
+        blocked = true;
+    }
+
 });
 
-options.forEach((option)=>{
-    option.addEventListener('click',()=>
-    {
+options.forEach((option) => {
+    option.addEventListener('click', () => {
         icon.classList.toggle("clicked");
         menu.classList.toggle("displayMenu");
         enableScroll();
@@ -45,26 +51,26 @@ options.forEach((option)=>{
 })
 
 // FUNCTIONS
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
 function preventDefault(e) {
-  e.preventDefault();
+    e.preventDefault();
 }
 
 function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
 }
 
 // modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
-  }));
-} catch(e) {}
+    window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+        get: function () { supportsPassive = true; }
+    }));
+} catch (e) { }
 
 var wheelOpt = supportsPassive ? { passive: false } : false;
 var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
