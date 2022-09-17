@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&family=Oswald&display=swap" rel="stylesheet" />
   <!-- STYLES -->
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>Quique's Portfolio</title>
 </head>
 
@@ -37,12 +38,15 @@
       <li><a href="#" class="link">Contactame</a></li>
     </ul>
   </nav>
+  <div class="nav_responsive">
+    <i class="fa-solid fa-bars responsiveBtn"></i>
+  </div>
   <!-- SECCION PRESENTATION -->
   <section id="presentation">
-    <div class="nav_responsive">
-      <i class="fa-solid fa-bars responsiveBtn"></i>
-    </div>
-    <div class="content">
+
+    <div class="content" data-aos="fade-down"
+    data-aos-delay="100"
+    data-aos-duration="800">
       <p class="welcome">Hola, me llamo</p>
       <p class="name">Kike</p>
       <p class="static-text">soy</p>
@@ -123,7 +127,10 @@
   </script>
   <script src="main.js"></script>
   <script src="imageSelector.js"></script>
-  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

@@ -53,12 +53,6 @@ document.querySelector(".popup-image").addEventListener('click', () => {
     enableScroll();
 
 });
-// document.querySelector(".popup-image img").addEventListener('click', () => {
-//     document.querySelector(".popup-image").style.display = 'none';
-//     nav.classList.toggle('hide');
-
-// })
-
 
 document.querySelectorAll(".image-container .image").forEach(image => {
     image.classList.add("fade-in");
