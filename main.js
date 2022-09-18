@@ -6,6 +6,7 @@ const menu = document.querySelector(".menu");
 const options = document.querySelectorAll(".option");
 const nav = document.querySelector("nav");
 const imgs=document.querySelectorAll(".image-container .image img") 
+const hovers=document.querySelectorAll(".hover");
 document.querySelector(".popup-image").addEventListener('click', () => {
     document.querySelector(".popup-image").style.display = 'none';
     nav.classList.toggle('hide');
@@ -86,7 +87,15 @@ options.forEach((option) => {
         blocked=false;
     })
 })
-
+//hover
+hovers.forEach((hover)=> {
+    hover.addEventListener("mouseover",()=>{
+    })
+    hover.addEventListener("mouseout",()=>{
+        hover.classList.remove("hoverAnimation");
+        console.log("holea");
+    })
+})
 // OBSERVERS
 const appearOnScroll = new IntersectionObserver(function (
     entries,

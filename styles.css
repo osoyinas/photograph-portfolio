@@ -128,7 +128,6 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  transition: all 0.4s ease;
 }
 
 nav .list {
@@ -141,16 +140,20 @@ nav .list li {
   margin: 1.5vh 0;
 }
 
-nav .list li .link {
+nav .list li .link{
   margin: 50vh 0;
   font-size: 1.3em;
   color: var(--white);
   font-weight: 400;
 }
-
-nav .list li:hover .link {
-  height: 1%;
+.link div{
+  transition: all 0.2s ease-in-out;
 }
+.link div:hover{
+  color: var(--orange);
+  font-size: 105%;
+}
+
 
 .scroll-up {
   box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.2);
@@ -221,17 +224,17 @@ nav .list li:hover .link {
 /* /PRESENTATION */
 /*ABOUT ME*/
 #aboutme {
-  max-height: 100vh;
+  height: 100vh;
   height: auto;
   background-color: var(--semi-gray);
   display: flex;
   /* align-items: center; */
   justify-content: center;
+  padding: 10vh 0;
 }
 
 #aboutme .container {
   border-radius: 50px;
-  padding: 5vh 0;
   height: auto;
   display: flex;
   align-items: center;
@@ -245,6 +248,7 @@ nav .list li:hover .link {
 #aboutme .container .text {
   color: var(--white);
   max-width:max(50%,260px);
+  height: 100%;
   text-align: center;
   font-weight: 300;
 }
@@ -259,7 +263,7 @@ nav .list li:hover .link {
 
 #aboutme .container .text .paragraph {
   line-height: 1.2em;
-  font-size: 1.9em;
+  font-size: 1.8em;
 }
 
 #aboutme .container .text .paragraph a {
@@ -404,7 +408,7 @@ nav .list li:hover .link {
   }
 }
 
-@media(max-width:1440px) {
+@media(max-width:1024px) {
   #aboutme .container .text .paragraph{
   font-size: 1.3em;
   }
@@ -434,13 +438,13 @@ nav .list li:hover .link {
     align-items: center;
   }
   .menu .menu-container .listResponsive{
-    padding-top: 80vh;
+    padding-top: 90vh;
     gap:20vh;
   }
 
   .option{
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     color: white;
     padding: 3vh 0;
   }
@@ -468,7 +472,7 @@ nav .list li:hover .link {
     position: absolute;
     display: block;
     height: 5px;
-    width: 45px;
+    width: 40px;
     border-radius: 5px;
     background-color: #fff;
     transform: rotate(0);
@@ -480,15 +484,15 @@ nav .list li:hover .link {
   }
 
   span.two {
-    top: 17px;
+    top: 12.5x;
   }
 
   span.three {
-    top: 34px;
+    top: 25px;
   }
 
   .clicked .one {
-    transform: translateY(17px) rotate(45deg);
+    transform: translateY(12.5px) rotate(45deg);
   }
 
   .clicked .two {
@@ -496,7 +500,7 @@ nav .list li:hover .link {
   }
 
   .clicked .three {
-    transform: translateY(-17px) rotate(-45deg);
+    transform: translateY(-12.5px) rotate(-45deg);
   }
 
   /* //ANIMATION BUTTON */
