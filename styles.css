@@ -472,7 +472,7 @@ nav .list li .link{
     position: absolute;
     display: block;
     height: 5px;
-    width: 40px;
+    width: 38px;
     border-radius: 5px;
     background-color: #fff;
     transform: rotate(0);
@@ -484,15 +484,15 @@ nav .list li .link{
   }
 
   span.two {
-    top: 12.5x;
+    top: 12x;
   }
 
   span.three {
-    top: 25px;
+    top: 23px;
   }
 
   .clicked .one {
-    transform: translateY(12.5px) rotate(45deg);
+    transform: translateY(12px) rotate(45deg);
   }
 
   .clicked .two {
@@ -500,7 +500,7 @@ nav .list li .link{
   }
 
   .clicked .three {
-    transform: translateY(-12.5px) rotate(-45deg);
+    transform: translateY(-12px) rotate(-45deg);
   }
 
   /* //ANIMATION BUTTON */
