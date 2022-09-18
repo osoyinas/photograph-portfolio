@@ -58,6 +58,7 @@ btnSaberM.addEventListener('mouseout', () => {
 icon.addEventListener("click", () => {
     icon.classList.toggle("clicked");
     menu.classList.toggle("displayMenu");
+
     if (blocked == true) {
         enableScroll();
         blocked=false;
@@ -82,6 +83,7 @@ options.forEach((option) => {
         icon.classList.toggle("clicked");
         menu.classList.toggle("displayMenu");
         enableScroll();
+        blocked=false;
     })
 })
 

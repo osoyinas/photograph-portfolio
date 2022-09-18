@@ -221,37 +221,36 @@ nav .list li:hover .link {
 /* /PRESENTATION */
 /*ABOUT ME*/
 #aboutme {
-  min-height: 100vh;
+  max-height: 100vh;
+  height: auto;
   background-color: var(--semi-gray);
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
 #aboutme .container {
-  /* max-width: 50vw; */
-  height: auto;
+  border-radius: 50px;
   padding: 5vh 0;
+  height: auto;
   display: flex;
   align-items: center;
+  gap: 3vh;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 15vw;
+  flex-direction: column;
   margin: 0 3vw;
   position: relative;
-  /* flex-wrap: wrap; */
 }
 
 #aboutme .container .text {
   color: var(--white);
-  height: 100%;
-  width: min(80%, 50vh);
-  text-align: left;
+  max-width:max(50%,260px);
+  text-align: center;
   font-weight: 300;
 }
 
 
-#aboutme .container .text .tittle {
+#aboutme .container .tittle {
   /* line-height: 100px;   */
   color: var(--orange);
   font-size: max(3em, 5vh);
@@ -260,19 +259,38 @@ nav .list li:hover .link {
 
 #aboutme .container .text .paragraph {
   line-height: 1.2em;
-  font-size: max(1.25em, 2.3vh);
+  font-size: 1.9em;
 }
 
 #aboutme .container .text .paragraph a {
   font-style: italic;
+  font-weight: 400;
   cursor: pointer;
 }
 
 #aboutme .container img {
-  min-height: 400px;
-  height: 30vw;
+  border-radius: 50%;
+  min-height: 200px;
+  height:15vw;
+  max-height: 300px;
+  background-color: #222;
+  margin-bottom: 1vh;
   /* border: dashed 0.2vw var(--orange); */
-  border-radius: 15px;
+}
+#aboutme .container .containerData{
+  margin-top: 4vh;
+  height: 30vh;
+  width: 100%;
+  background-color: var(--dark-gray);
+}
+#aboutme .container .containerData ul{
+  padding: 3vh;
+  line-height: 4em;
+
+}
+#aboutme .container .containerData ul li{
+  font-weight: 400;
+  font-size: max(1.25em, 1vh);
 }
 
 /*/ABOUT ME*/
@@ -386,12 +404,9 @@ nav .list li:hover .link {
   }
 }
 
-@media(max-width:1024px) {
-  #aboutme .container .text {
-    text-align: justify;
-  }
+@media(max-width:1440px) {
   #aboutme .container .text .paragraph{
-  font-size: 1.2em;
+  font-size: 1.3em;
   }
   .menu .menu-container a{
     display: block;
