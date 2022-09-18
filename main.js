@@ -1,5 +1,34 @@
+// ELEMENTS
+const container = document.querySelector(".containerSabermas")
+const btnSaberM = document.querySelector(".sabermasBtn")
+const icon = document.querySelector(".menu_icon");
+const menu = document.querySelector(".menu");
+const options = document.querySelectorAll(".option");
+const nav = document.querySelector("nav");
+const imgs=document.querySelectorAll(".image-container .image img") 
+document.querySelector(".popup-image").addEventListener('click', () => {
+    document.querySelector(".popup-image").style.display = 'none';
+    nav.classList.toggle('hide');
+    enableScroll();
+
+});
+
+document.querySelectorAll(".image-container .image").forEach(image => {
+    image.classList.add("fade-in");
+});
+const faders = document.querySelectorAll('.fade-in');
+const sliders = document.querySelectorAll('.slide-in');
+const appearOptions = {
+    threshold: 0,
+    // rootMargin: "0px 0px -150px 0px"
+
+};
+//  VARIABLES
+let blocked = false;
 
 let lastScroll = 0;
+// ANIMATIONS
+// NAV SCROLL ANIMATION
 window.addEventListener("scroll", () => {
     currentScroll = window.scrollY;
     if (currentScroll <= 0) {
@@ -17,18 +46,15 @@ window.addEventListener("scroll", () => {
     }
     lastScroll = currentScroll;
 });
-const container = document.querySelector(".containerSabermas")
-const btnSaberM = document.querySelector(".sabermasBtn")
+// LEVITATE
 btnSaberM.addEventListener('mouseenter', () => {
     container.classList.add("levitate");
 });
 btnSaberM.addEventListener('mouseout', () => {
     container.classList.remove("levitate");
 });
-let blocked = false;
-let icon = document.querySelector(".menu_icon");
-let menu = document.querySelector(".menu");
-let options = document.querySelectorAll(".option");
+
+// EVENTS
 icon.addEventListener("click", () => {
     icon.classList.toggle("clicked");
     menu.classList.toggle("displayMenu");
@@ -40,9 +66,17 @@ icon.addEventListener("click", () => {
         disableScroll();
         blocked = true;
     }
-
+});
+imgs.forEach(image => {
+    image.addEventListener('click', () => {
+        document.querySelector(".popup-image").style.display = 'block';
+        document.querySelector(".popup-image img").src = image.getAttribute('src');
+        nav.classList.toggle('hide');
+        disableScroll();
+    })
 });
 
+// SCROLL BLOCK FOR RESPONSIVE MENU
 options.forEach((option) => {
     option.addEventListener('click', () => {
         icon.classList.toggle("clicked");
@@ -51,21 +85,42 @@ options.forEach((option) => {
     })
 })
 
+// OBSERVERS
+const appearOnScroll = new IntersectionObserver(function (
+    entries,
+    appearOnScroll
+) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        }
+    })
+}, appearOptions);
+
+// SLIDERS & FADERS
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+sliders.forEach(slider => {
+    appearOnScroll.observe(slider);
+})
+
 // FUNCTIONS
-var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
 
 function preventDefault(e) {
     e.preventDefault();
 }
-
 function preventDefaultForScrollKeys(e) {
     if (keys[e.keyCode]) {
         preventDefault(e);
         return false;
     }
 }
-
-// modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
     window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
