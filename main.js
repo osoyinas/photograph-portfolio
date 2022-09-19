@@ -7,6 +7,8 @@ const options = document.querySelectorAll(".option");
 const nav = document.querySelector("nav");
 const imgs=document.querySelectorAll(".image-container .image img") 
 const hovers=document.querySelectorAll(".hover");
+const faders = document.querySelectorAll('.fade-in');
+const sliders = document.querySelectorAll('.slide-in');
 document.querySelector(".popup-image").addEventListener('click', () => {
     document.querySelector(".popup-image").style.display = 'none';
     nav.classList.toggle('hide');
@@ -17,8 +19,7 @@ document.querySelector(".popup-image").addEventListener('click', () => {
 document.querySelectorAll(".image-container .image").forEach(image => {
     image.classList.add("fade-in");
 });
-const faders = document.querySelectorAll('.fade-in');
-const sliders = document.querySelectorAll('.slide-in');
+
 const appearOptions = {
     threshold: 0,
     // rootMargin: "0px 0px -150px 0px"
@@ -26,7 +27,6 @@ const appearOptions = {
 };
 //  VARIABLES
 let blocked = false;
-
 let lastScroll = 0;
 // ANIMATIONS
 // NAV SCROLL ANIMATION
@@ -35,12 +35,12 @@ window.addEventListener("scroll", () => {
     if (currentScroll <= 0) {
         nav.classList.remove("scroll-up");
     }
-    if (currentScroll > lastScroll && !nav.classList.contains("scroll-down")) {
+    else if (currentScroll > lastScroll && !nav.classList.contains("scroll-down")) {
         nav.removeAttribute("data-aos");
         nav.classList.add("scroll-down");
         nav.classList.remove("scroll-up");
     }
-    if (currentScroll < lastScroll && nav.classList.contains("scroll-down")) {
+    else if (currentScroll < lastScroll && nav.classList.contains("scroll-down")) {
         nav.classList.remove("scroll-down");
         nav.classList.add("scroll-up");
 
