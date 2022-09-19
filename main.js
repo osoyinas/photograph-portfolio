@@ -7,8 +7,7 @@ const options = document.querySelectorAll(".option");
 const nav = document.querySelector("nav");
 const imgs=document.querySelectorAll(".image-container .image img") 
 const hovers=document.querySelectorAll(".hover");
-const faders = document.querySelectorAll('.fade-in');
-const sliders = document.querySelectorAll('.slide-in');
+
 document.querySelector(".popup-image").addEventListener('click', () => {
     document.querySelector(".popup-image").style.display = 'none';
     nav.classList.toggle('hide');
@@ -77,7 +76,8 @@ imgs.forEach(image => {
         disableScroll();
     })
 });
-
+const faders = document.querySelectorAll('.fade-in');
+const sliders = document.querySelectorAll('.slide-in');
 // SCROLL BLOCK FOR RESPONSIVE MENU
 options.forEach((option) => {
     option.addEventListener('click', () => {
@@ -113,6 +113,7 @@ const appearOnScroll = new IntersectionObserver(function (
 
 // SLIDERS & FADERS
 faders.forEach(fader => {
+
     appearOnScroll.observe(fader);
 });
 
