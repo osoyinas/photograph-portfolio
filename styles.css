@@ -127,7 +127,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  transition: background-color 0.5s ease,transform 0.7s ease;
+  transition: background-color 0.5s ease,transform 0.7s ease,box-shadow 0.5s ease;
 
 }
 
@@ -158,13 +158,13 @@ nav .list li .link{
 
 .scroll-up {
   box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.2);
-  background-color: rgba(0,0,0, 0.7);
+  background-color: var(--dark-gray);
   transition: transform 0.5s ease;
 }
 
 .scroll-down {
   transform: translate3d(0, -100%, 0);
-  background-color: rgba(0,0,0, 0.7);
+  background-color: var(--dark-gray);
   transition: transform 0.5s ease,background-color 1.5s ease;
 
 }
@@ -307,9 +307,10 @@ nav .list li .link{
 
 /* PHOTOS */
 #photos {
-  height: 100vh;
+  height: 100%;
   position: relative;
   background-color: var(--dark-gray);
+  padding-bottom: 5vw;
 }
 
 #photos .tittle {
@@ -413,7 +414,19 @@ nav .list li .link{
     justify-content: center;
   }
 }
-
+footer{
+  height: 5vh;
+  width: 100%;
+  background-color: var(--semi-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+footer p{
+  color: var(--white);
+  font-style: italic;
+}
 @media(max-width:1024px) {
   #aboutme .container .text .paragraph{
   font-size: 1.3em;
