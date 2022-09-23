@@ -25,7 +25,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow-x: hd;
+  overflow-x: hidden;
 }
 
 * {
