@@ -438,17 +438,17 @@ nav .list li .link {
 
 /* ANIMATION */
 .btn-shine {
-
   padding: 12px 48px;
-  color: ;
-  background: linear-gradient(to right, var(--white) 30%, var(--orange)60%,var(--white) 90%);
-  background-position: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 10s infinite linear;
-  animation-fill-mode: forwards;
+  color: var(--white);
+  animation: h1 2s infinite linear;
 }
-
+@-webkit-keyframes h1 {
+  0%   {text-shadow: 0 0 3px var(--orange); color: #fff;}
+  25%  {text-shadow: 0 0 12px var(--orange);}
+  50%  {text-shadow: 0 0 18px var(--orange); color: var(--white);}
+  75%  {text-shadow: 0 0 12px var(--orange);}
+  100% {text-shadow: 0 0 3px var(--orange); color: #fff;}
+}
 @keyframes shine {
   0% {
     background-position: 0;
