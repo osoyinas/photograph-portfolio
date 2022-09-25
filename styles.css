@@ -182,7 +182,6 @@ nav .list li .link {
 /* PRESENTATION */
 #presentation {
   height: 100vh;
-  /* background: linear-gradient(var(--gray),var(--dark-gray)); */
   background-color: var(--dark-gray);
   display: flex;
   justify-content: center;
@@ -231,7 +230,30 @@ nav .list li .link {
   border-radius: 2px;
   animation: float 2s infinite;
 }
+#presentation .container{
+  position: absolute;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  height: 105%;
+  top: 92vh;
+}
+#presentation .media_post{
+  color: var(--white);
+  font-size:max(2rem,2vw);
+  cursor: pointer;
 
+}
+#presentation .media_post i {
+  transition: all 0.1s ease-in-out;
+  
+}
+
+#presentation .media_post i:hover {
+  transition: all 0.2s ease-in-out;
+  color: var(--orange);
+  transform: translate(0,-5px);
+}
 /* /PRESENTATION */
 /*ABOUT ME*/
 #aboutme {
@@ -408,10 +430,11 @@ nav .list li .link {
 #sesions .container {
   max-width: 70%;
   width: 90%;
-  padding: 50px;
+  padding: 5px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 5vh;
 }
 
 #sesions .container .text {
@@ -459,7 +482,6 @@ nav .list li .link {
   }
 }
 
-/* animation */
 #sesions .container .precio #sesionP {
   font-size: 20%;
 }
@@ -468,23 +490,19 @@ nav .list li .link {
   font-size: 40%;
   font-weight: 500;
 }
-
-
-/* SESIONS */
 /* FOOTER */
 footer {
-  height: 5vh;
+  height: 15vh;
   width: 100%;
-  background-color: var(--semi-gray);
+  background-color: var(--dark-gray);
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 footer p {
+  font-family: ;
   color: var(--white);
-  font-style: italic;
 }
 
 /* MEDIA QUERIES */
@@ -523,8 +541,12 @@ footer p {
 #sesions .container .precio{
   margin-top: 5vw;
 }
-
-
+#contact .container{
+width: 250px;
+}
+#contact .container .media_post{
+  font-size:1.8rem;
+}
   .menu .menu-container a {
     display: block;
   }
