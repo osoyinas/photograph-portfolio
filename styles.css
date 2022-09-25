@@ -494,15 +494,16 @@ nav .list li .link {
 footer {
   height: 15vh;
   width: 100%;
-  background-color: var(--dark-gray);
+  background-color: var(--semi-gray);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end
 }
 
 footer p {
   font-family: ;
   color: var(--white);
+  padding-bottom: 20px;
 }
 
 /* MEDIA QUERIES */
