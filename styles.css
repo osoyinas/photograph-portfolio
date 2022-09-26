@@ -503,6 +503,7 @@ footer {
 footer p {
   color: var(--white);
   padding-bottom: 20px;
+  font-size: 13px;
 }
 
 /* MEDIA QUERIES */
