@@ -459,7 +459,9 @@ nav .list li .link {
   font-size: max(8rem,12vw);
   font-weight: 400;
 }
-
+#sesions ,.container ul li {
+  list-style: outside;
+}
 /* ANIMATION */
 .btn-shine {
   padding: 12px 48px;
