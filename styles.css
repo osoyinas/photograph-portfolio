@@ -232,7 +232,7 @@ nav .list li .link {
 }
 #presentation .container{
   position: absolute;
-  width: 350px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
   height: 105%;
@@ -501,7 +501,6 @@ footer {
 }
 
 footer p {
-  font-family: ;
   color: var(--white);
   padding-bottom: 20px;
 }
