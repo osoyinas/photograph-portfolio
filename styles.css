@@ -250,6 +250,7 @@ nav .list li .link {
 }
 
 #presentation .media_post i:hover {
+  padding-bottom: 10px;
   transition: all 0.2s ease-in-out;
   color: var(--orange);
   transform: translate(0,-5px);
