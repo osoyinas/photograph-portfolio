@@ -11,7 +11,23 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scrollbar-width: normal;
+  scrollbar-color: var(--gray) var(--semi-gray);
 
+}
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: var(--gray);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+
+}
+html::-webkit-scrollbar-thumb:hover{
+  transition: all 1s ease-in;
+  background-color: #464d57;
 }
 
 .menu .menu-container a {
@@ -164,13 +180,13 @@ nav .list li .link {
 .scroll-up {
   box-shadow: 0 0 10px 7px rgba(0, 0, 0, 0.2);
   background-color: var(--dark-gray);
-  transition: transform 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .scroll-down {
   transform: translate3d(0, -100%, 0);
   background-color: var(--dark-gray);
-  transition: transform 0.5s ease, background-color 1.5s ease;
+  transition: all 0.5s ease, background-color 1.5s ease;
 }
 
 .hide {
@@ -383,7 +399,7 @@ nav .list li .link {
 }
 
 #photos .image-container .image:hover img {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 #photos .popup-image {
