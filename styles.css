@@ -625,19 +625,24 @@ width: 250px;
     align-items: center;
     padding: 5px 0;
     justify-content: right;
-    margin: 15px;
+    margin: 10px;
+    transition: all 500ms ease;
   }
 
   .menu_icon span {
     position: absolute;
     display: block;
     height: 5px;
-    width: 38px;
+    width: 34px;
     border-radius: 5px;
     background-color: #fff;
     transform: rotate(0);
-    transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition: all 500ms ease;
   }
+  .menu_icon span:active {
+    margin-left: 20px;
+  }
+
 
   span.one {
     top: 0px;
@@ -650,7 +655,10 @@ width: 250px;
   span.three {
     top: 26px;
   }
-
+  .clicked{
+    transform: translatex(3px);
+    transition: all 800ms ease;
+  }
   .clicked .one {
     transform: translateY(12px) rotate(45deg);
   }
