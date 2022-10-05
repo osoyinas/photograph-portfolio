@@ -660,7 +660,7 @@ width: 250px;
     transition: all 800ms ease;
   }
   .clicked .one {
-    transform: translateY(12px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
   }
 
   .clicked .two {
@@ -668,7 +668,7 @@ width: 250px;
   }
 
   .clicked .three {
-    transform: translateY(-12px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
   }
 
   /* //ANIMATION BUTTON */
